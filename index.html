@@ -12,18 +12,22 @@
   <body>
     <div class="container">
       <div class="stats">
-        <p>Time: <span id="timer">0s</span></p>
+        <p>Time: <span id="timer">60s</span></p>
         <p>Mistakes: <span id="mistakes">0</span></p>
       </div>
       <div
         id="quote"
         onmousedown="return false"
-        onselectstart="return false"
       ></div>
       <textarea
         rows="3"
         id="quote-input"
-        placeholder="Type here when the test starts.."
+        placeholder="Type here when the test starts..."
+        onpaste="return false;" 
+        oncopy="return false" 
+        oncut="return false" 
+        ondrag="return false" 
+        ondrop="return false"
       ></textarea>
       <button id="start-test" onclick="startTest()">Start Test</button>
       <button id="stop-test" onclick="displayResult()">Stop Test</button>
@@ -33,6 +37,9 @@
           <p>Accuracy: <span id="accuracy"></span></p>
           <p>Speed: <span id="wpm"></span></p>
         </div>
+      </div>
+      <div class="restart">
+        <button id="restarts" onclick="restart()">Try Again</button>
       </div>
     </div>
     <script src="script.js"></script>

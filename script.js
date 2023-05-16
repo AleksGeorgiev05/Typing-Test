@@ -95,6 +95,7 @@ const displayResult = () => {
   document.querySelector(".result").style.display = "block";
   clearInterval(timer);
   document.getElementById("stop-test").style.display = "none";
+  document.getElementById("restarts").style.display = "block";
   userInput.disabled = true;
   let timeTaken = 1;
   if (time != 0) {
@@ -116,12 +117,30 @@ const startTest = () => {
   timeReduce();
   document.getElementById("start-test").style.display = "none";
   document.getElementById("stop-test").style.display = "block";
+  document.getElementById("restarts").style.display = "none";
 };
 
 window.onload = () => {
   userInput.value = "";
   document.getElementById("start-test").style.display = "block";
   document.getElementById("stop-test").style.display = "none";
+  document.getElementById("restarts").style.display = "none";
   userInput.disabled = true;
   renderNewQuote();
 };
+
+//Рестарт на играта
+function restart(){
+  userInput.value = "";
+  quoteSection.innerText= "";
+  document.getElementById("timer").innerText = "60s";
+  document.getElementById("start-test").style.display = "block";
+  document.getElementById("stop-test").style.display = "none";
+  document.getElementById("restarts").style.display = "none";
+  userInput.disabled = true;
+  document.getElementById("mistakes").innerText = "0"
+  document.getElementById("wpm").innerText = "0 wpm";
+  document.getElementById("accuracy").innerText = "0 %";
+  document.querySelector(".result").style.display = "none";
+  renderNewQuote();
+}

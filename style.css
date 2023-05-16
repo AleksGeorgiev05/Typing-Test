@@ -33,7 +33,7 @@
 
   #quote {
     text-align: justify;
-    margin: 50px 0 30px 0;
+    margin: 40px 0 30px 0;
   }
 
   textarea {
@@ -47,6 +47,7 @@
   button {
     float: right;
     margin-top: 20px;
+    margin-bottom: -20px;
     background-color: #3066f6;
     color: #ffffff;
     border: none;
@@ -91,4 +92,17 @@
   #stop-test:hover{
     background-color: #15399a;
     cursor: pointer;
+  }
+  #restarts:hover{
+    background-color: #15399a;
+    cursor: pointer;
+  }
+  .restart{
+    margin: auto;
+  }
+  #restarts{
+    position: inherit;
+    margin-right: 200px;
+    margin-top: 15px;
+    margin-bottom: -20px;
   }
