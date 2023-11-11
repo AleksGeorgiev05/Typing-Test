@@ -93,16 +93,16 @@
     background-color: #15399a;
     cursor: pointer;
   }
+
   #restarts:hover{
     background-color: #15399a;
     cursor: pointer;
   }
-  .restart{
-    margin: auto;
-  }
+
   #restarts{
     position: inherit;
-    margin-right: 200px;
+    margin-right: 185px;
     margin-top: 15px;
     margin-bottom: -20px;
+    align-content: center;
   }
